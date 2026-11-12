@@ -16,6 +16,7 @@ Follow the structure in `README.md` (`infra/`, `collector/`, `backend/rules/`, `
 One module per rule in `backend/rules/`.
 
 ## Commands
+  Windows + Git Bash. Activate venv first: source .venv/Scripts/activate
 
 ```bash
 pip install -e "collector[dev]"
