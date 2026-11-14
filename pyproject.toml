@@ -14,3 +14,7 @@ strict = true
 
 [tool.pytest.ini_options]
 testpaths = ["collector/tests"]
+
+[[tool.mypy.overrides]]
+module = ["pymodbus", "pymodbus.*"]
+ignore_missing_imports = true

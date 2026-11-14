@@ -7,7 +7,7 @@ name = "collector"
 version = "0.1.0"
 description = "Reads PV values from a Sungrow inverter via Modbus TCP"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = ["pymodbus>=3.16,<4"]
 
 [project.optional-dependencies]
 dev = ["ruff", "mypy", "pytest"]
