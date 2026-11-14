@@ -11,10 +11,6 @@ select = ["E", "F", "W", "I", "B", "UP", "SIM", "N"]
 [tool.mypy]
 python_version = "3.12"
 strict = true
-
-[tool.pytest.ini_options]
-testpaths = ["collector/tests"]
-
-[[tool.mypy.overrides]]
-module = ["pymodbus", "pymodbus.*"]
-ignore_missing_imports = true
+# pymodbus has no type hints on connect()/close(); allow calls into it,
+# our own code stays fully strict.
+untyped_calls_exclude = ["pymodbus"]
